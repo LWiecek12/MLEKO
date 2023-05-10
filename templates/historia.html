@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historia Zakupów</title>
+</head>
+<body>
+    <h1>Historia Zakupów</h1>
+    <table>
+        <tr>
+            <th>Imię</th>
+            <th>Data</th>
+            <th>Ilość</th>
+        </tr>
+        {% for zakup in historia %}
+        <tr>
+            <td>{{ zakup[0] }}</td>
+            <td>{{ zakup[1] }}</td>
+            <td>{{ zakup[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

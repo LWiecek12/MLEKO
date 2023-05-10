@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Historia zakupów</title>
+</head>
+<body>
+    <h1>Historia zakupów</h1>
+    <ul>
+        {% for zakup in zakupy %}
+            <li>{{ zakup[0] }} - {{ zakup[1] }} - {{ zakup[2] }}</li>
+        {% endfor %}
+    </ul>
+    <form action="/dodaj_zakup" method="post">
+        <label for="imie">Imię:</label>
+        <input type="text" id="imie" name="imie"><br>
+
+        <label for="data">Data:</label>
+        <input type="text" id="data" name="data" placeholder="YYYY-MM-DD"><br>
+
+        <label for="ilosc">Ilość:</label>
+        <input type="text" id="ilosc" name="ilosc"><br>
+
+        <input type="submit" value="Dodaj zakup">
+    </form>
+</body>
+</html>
